@@ -1,4 +1,4 @@
-# Projeto MapauESC
+# Projeto MapaUESC
 
 Este é um projeto de desenvolvimento web em Django chamado MapauESC, que envolve múltiplos colaboradores. O projeto utiliza controle de versão com Git e branches separadas por desenvolvedor para garantir organização, integridade e segurança do código.
 
