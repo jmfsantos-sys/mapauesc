@@ -16,7 +16,7 @@ Exemplos de branches individuais já criadas:
 - feature/lucas  
 - feature/daniel  
 - feature/maria-eduarda  
-- feature/joao-fidelis (sua branch)
+- feature/joao-fidelis
 
 ---
 
