@@ -1,0 +1,340 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Mapa da UESC</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="{% static 'img/favicon.png' %}" rel="icon">
+    <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header dark-background d-flex flex-column">
+        <i class="header-toggle d-xl-none bi bi-list"></i>
+
+        <div class="profile-img">
+            <img src="{% static 'img/my-profile-img.jpg' %}" alt="Foto de Perfil" class="img-fluid rounded-circle">
+        </div>
+
+        <a href="{% url 'index' %}" class="logo d-flex align-items-center justify-content-center">
+            <h1 class="sitename">UESC</h1>
+        </a>
+
+        <div class="social-links text-center">
+            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+
+        <nav id="navmenu" class="navmenu">
+            <ul>
+                <li><a href="{% url 'index' %}#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+                <li><a href="{% url 'index' %}#about"><i class="bi bi-person navicon"></i> Sobre</a></li>
+                <li><a href="{% url 'index' %}#resume"><i class="bi bi-file-earmark-text navicon"></i> Escopo</a></li>
+                <li><a href="{% url 'index' %}#portfolio"><i class="bi bi-images navicon"></i> Backlog</a></li>
+                <li><a href="{% url 'index' %}#services"><i class="bi bi-hdd-stack navicon"></i> Sprints</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="#"><span>Saúde e Esportes (01–05)</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">01 - Hospital Veterinário</a></li>
+                                <li><a href="#">02 - Campo de Futebol</a></li>
+                                <li><a href="#">03 - Piscina Semi-Olímpica</a></li>
+                                <li><a href="#">04 - Pavilhão de Educação Física</a></li>
+                                <li><a href="#">05 - Quadra Poliesportiva</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Serviços e Pavilhões Iniciais (06–10)</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">06 - Restaurante Universitário (RU)</a></li>
+                                <li><a href="#">07 - Centro de Microscopia Eletrônica (CME)</a></li>
+                                <li><a href="#">08 - Pavilhão Waldir Pires</a></li>
+                                <li><a href="#">09 - Pavilhão Pedro Calmon</a></li>
+                                <li><a href="#">10 - Pavilhão Adonias Filho</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Pavilhões e Administração (11–15)</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">11 - Pavilhão Professor Max de Menezes</a></li>
+                                <li><a href="#">12 - Centro de Computação Avançada e Multidisciplinar (CCAM)</a></li>
+                                <li><a href="#">13 - Guarita (Entrada da Universidade)</a></li>
+                                <li><a href="#">14 - Brasão UESC e Praça das Bandeiras</a></li>
+                                <li><a href="#">15 - Torre Administrativa</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Pavilhões e Ciências Aplicadas (16–20)</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">16 - Pavilhão Jorge Amado</a></li>
+                                <li><a href="#">17 - Quadra Poliesportiva</a></li>
+                                <li><a href="#">18 - Centro de Biotecnologia e Genética (CBG)</a></li>
+                                <li><a href="#">19 - Pavilhão Agroindústria</a></li>
+                                <li><a href="#">20 - Instituto de Pesquisas e Análise Físico-Químicas</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Centros de Pesquisa e Pavilhões (21–25)</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">21 - CPqCTR</a></li>
+                                <li><a href="#">22 - Pavilhão Manoel Fontes Nabuco</a></li>
+                                <li><a href="#">23 - Biblioteca Central</a></li>
+                                <li><a href="#">24 - Auditório Paulo Souto</a></li>
+                                <li><a href="#">25 - Pavilhão Júlio Cezar de Mattos Cascardo</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Estruturas Acadêmicas e Memória (26–30)</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">26 - Pavilhão Prof. Evandro Sena Freire</a></li>
+                                <li><a href="#">27 - Oficina de Manutenção e Prefeitura</a></li>
+                                <li><a href="#">28 - Núcleo EaD e Laboratórios</a></li>
+                                <li><a href="#">29 - Estação de Animais de Laboratório</a></li>
+                                <li><a href="#">30 - Placa comemorativa pelos Direitos Humanos</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Homenagens e Áreas Verdes (31–35)</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">31 - Placa em homenagem a José Haroldo Castro Vieira</a></li>
+                                <li><a href="#">32 - Base Ambiental</a></li>
+                                <li><a href="#">33 - Bosque</a></li>
+                                <li><a href="#">34 - Horto de Plantas Medicinais</a></li>
+                                <li><a href="#">35 - Casa de Vegetação</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Casas de Vegetação e Laboratórios (36–40)</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">36 - Casa de Vegetação</a></li>
+                                <li><a href="#">37 - Casa de Vegetação</a></li>
+                                <li><a href="#">38 - Horto Florestal da Uesc</a></li>
+                                <li><a href="#">39 - Laboratório LAPROBIO</a></li>
+                                <li><a href="#">40 - Chocosol</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Produção e Ciências Humanas (41–45)</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">41 - Cervejaria/Cachaçaria</a></li>
+                                <li><a href="#">42 - Arena Ramon Vane</a></li>
+                                <li><a href="#">43 - CLCE</a></li>
+                                <li><a href="#">44 - NEPAB</a></li>
+                                <li><a href="#">45 - Ciências Sociais</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#"><span>Pesquisa e Encerramento (46–48)</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                            <ul>
+                                <li><a href="#">46 - Germoplasma</a></li>
+                                <li><a href="#">47 - LAPNAR</a></li>
+                                <li><a href="#">48 - Crematório</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'index' %}#contact"><i class="bi bi-envelope navicon"></i> Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <section id="hero" class="hero section dark-background">
+            <img src="{% static 'img/hero-bg.jpg' %}" alt="Mapa da UESC" data-aos="fade-in" class="">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <h2>Mapa da UESC</h2>
+                <p>Modelo <span class="typed" data-typed-items="Inovador, Ágil, Rápido, Intuitivo"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            </div>
+        </section>
+
+        <section id="about" class="about section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Escopo</h2>
+                <p>O mapa aprimorado tem como propósito fornecer informações relevantes sobre cada local da UESC que não estão disponibilizadas no oficial. Além disso, o usuário teria acesso a uma funcionalidade semelhante ao Google Maps, onde saberia sua localização atual e poderia visualizar uma rota ao local de destino. O mapa aprimorado seria benéfico tanto àqueles que estão perdidos dentro da UESC quanto àqueles que nunca foram ou pretendem ir em algum lugar específico.</p>
+            </div>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4 justify-content-center">
+                    <div class="col-lg-4">
+                        <img src="{% static 'img/my-profile-img.jpg' %}" class="img-fluid" alt="Logotipo UESC">
+                    </div>
+                    <div class="col-lg-8 content">
+                        <h2>Descrição</h2>
+                        <p class="fst-italic py-3">
+                            Uso da mesma imagem estática do Mapa da UESC.
+                        </p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Informações Relevantes:</strong> <span>Localização de auditórios (no oficial só consta a localização do auditório Paulo Souto). O que tem em cada andar dos prédios, como a torre e os pavilhões (ex.: em um andar pode conter mais de um colegiado/departamento). Indicação da numeração das salas em cada andar (ex.: 2º andar - 9240-9250).</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Interatividade:</strong> <span>A lista de nomes dos locais ficaria em uma barra lateral escondida, que só apareceria ao passar o mouse/clicar. Quando o nome do local buscado for clicado, o mapa selecionaria esse local. Ao passar o mouse sobre a região do local, apareceria a "mãozinha" e ao clicar apareceria o conteúdo em um modal.</span></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Conteúdo do Modal:</strong> <span>Apareceria a imagem e acima dela teriam ícones, ao clicar em cada um, teria alguma informação (ex.: numeração de salas de cada andar do prédio). Talvez ter mais de uma imagem, como imagens de dentro do pavilhão.</span></li>
+                                    <li><i class="bi bi-chevron-right"></i> <strong>Funcionalidades de Mapa:</strong> <span>Localização atual e em tempo real do usuário. Possibilidade de adicionar trajeto origem-destino. Se a pessoa não está na UESC, fica como default que a origem é a guarita.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="py-3">
+                            Haverá uma área de contato para adicionar sugestões de mudanças mais superficiais ou de usabilidade, ou atualizações que ocorreram no campus e devem estar presentes no mapa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resume" class="resume section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Backlog</h2>
+                <p>Lista de tarefas e itens a serem desenvolvidos para o projeto.</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="resume-title">Recursos e Entregas</h3>
+                        <div class="resume-item pb-0"><h4>Links do Projeto</h4><ul><li>Modificação na imagem dos locais que atualmente estão modificados, como o campo perto da guarita.</li><li>Link do projeto no Jira.</li><li>Link do Mockup no Figma.</li><li>Link da visualização do Mockup.</li><li>Adicionar link do repositório no GitHub.</li></ul></div>
+                        <h3 class="resume-title">Sprint 1 - Protótipo Angular</h3>
+                        <div class="resume-item"><h4>Data: 12/09/2025 (15% da nota)</h4><ul><li>(2) Criar Mockup no Figma</li><li>(2) Criar estrutura de layout</li><li>(2) Fazer marcações dos locais no mapa UESC</li><li>(2) Criar rota inicial para o mapa</li><li>(2) Inserir API do mapa (Leaflet, OpenLayers ou Google Maps)</li><li>(1) Procurar as informações necessárias para compor o modal</li></ul></div>
+                        <div class="resume-item"><h4>Sprint 2 - Angular Avançado</h4><h5>Data: 30/09/2025 (20% da nota)</h5><ul><li>(2) Criação do modelo de entidade e relacionamento - MER</li><li>(1) Criação de dados mockados (dados fixos, sem bd)</li><li>(2) Integrar biblioteca de mapas (Leaflet, OpenLayers ou Google Maps)</li><li>Implementar interações com o mapa</li><li>(3) Fazer a trajetória (rotas de origem-destino)</li><li>(3) Localização atual em tempo real</li></ul></div>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="resume-title">Sprints Restantes</h3>
+                        <div class="resume-item"><h4>Sprint 3 - Backend Spring Boot</h4><h5>Data: 22/10/2025 (25% da nota)</h5><ul><li>(2) Modelagem do banco de dados</li><li>(2) Criar projeto Spring Boot para gerenciar pontos do mapa</li><li>(2) Substituir os dados mockados por dados reais do backend</li><li>(1) Teste de integração</li></ul></div>
+                        <div class="resume-item"><h4>Sprint 4 - Fullstack + Auth</h4><h5>Data: 24/11/2025 (25% da nota)</h5><ul><li>(1) Listagem e pesquisa de nomes dos locais</li><li>(2) Janela modal com informações</li><li>(1) Adicionar links dos locais (ex.: departamento tal)</li><li>(1) Link de contato</li><li>(1) Ajustar design</li><li>(2) Implementar filtragem (talvez: identificação de eventos)</li><li>(1) Teste final</li><li>(2) Responsividade para celular (ou deixar para a apresentação final)</li></ul></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio section light-background">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Backlog Visual</h2>
+                <p>Representação visual do backlog e entregas do projeto.</p>
+            </div>
+            <div class="container">
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">Todos</li>
+                        <li data-filter=".sprint1">Sprint 1</li>
+                        <li data-filter=".sprint2">Sprint 2</li>
+                        <li data-filter=".sprint3">Sprint 3</li>
+                        <li data-filter=".sprint4">Sprint 4</li>
+                    </ul>
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                        {% for item in portfolio_items %}
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-{{ item.category|lower }}">
+                            <div class="portfolio-content h-100">
+                                <img src="{{ item.image.url }}" class="img-fluid" alt="{{ item.title }}">
+                                <div class="portfolio-info">
+                                    <h4>{{ item.title }}</h4>
+                                    <p>{{ item.description }}</p>
+                                    <a href="{{ item.image.url }}" title="{{ item.title }}" data-gallery="portfolio-gallery-{{item.category|lower}}" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="{% url 'portfolio_details' item.id %}" title="Mais Detalhes" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <div class="col-12"><p>Nenhum item do backlog para exibir.</p></div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services section">
+        </section>
+
+        <section id="testimonials" class="testimonials section light-background">
+        </section>
+
+        <section id="contact" class="contact section">
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Contato & Sugestões</h2>
+                <p>Tem alguma sugestão para o mapa ou encontrou uma informação desatualizada? Entre em contato!</p>
+            </div>
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row gy-4">
+                    <div class="col-lg-5">
+                        <div class="info-wrap">
+                            <div class="info-item d-flex"><i class="bi bi-geo-alt flex-shrink-0"></i><div><h3>Endereço</h3><p>Universidade Estadual de Santa Cruz</p></div></div>
+                            <div class="info-item d-flex"><i class="bi bi-telephone flex-shrink-0"></i><div><h3>Telefone</h3><p>+55 (73) 3680-5000</p></div></div>
+                            <div class="info-item d-flex"><i class="bi bi-envelope flex-shrink-0"></i><div><h3>Email</h3><p>contato@uesc.br</p></div></div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.891963879799!2d-39.1772656851656!3d-14.79819208976214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x739a8264a354519%3A0x6a0f4de74c0b4c2!2sUniversidade%20Estadual%20de%20Santa%20Cruz!5e0!3m2!1spt-BR!2sbr!4v1663169420841!5m2!1spt-BR!2sbr" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <form action="{% url 'contact' %}" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="200">
+                            {% csrf_token %}
+                            <div class="row gy-4">
+                                <div class="col-md-6"><label for="name-field" class="pb-2">Seu Nome</label><input type="text" name="name" id="name-field" class="form-control" required></div>
+                                <div class="col-md-6"><label for="email-field" class="pb-2">Seu Email</label><input type="email" class="form-control" name="email" id="email-field" required></div>
+                                <div class="col-md-12"><label for="subject-field" class="pb-2">Assunto</label><input type="text" name="subject" id="subject-field" class="form-control" required></div>
+                                <div class="col-md-12"><label for="message-field" class="pb-2">Sugestão / Mensagem</label><textarea class="form-control" name="message" rows="10" id="message-field" required></textarea></div>
+                                <div class="col-md-12 text-center">
+                                    <div class="loading"></div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message"></div>
+                                    <button type="submit">Enviar Mensagem</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+        <div class="container">
+            <div class="copyright text-center ">
+                <p>© <span>Copyright</span> <strong class="px-1 sitename">Mapa da UESC</strong> <span>Todos os Direitos Reservados</span></p>
+            </div>
+            <div class="credits">
+                Template por <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/typed.js/typed.umd.js' %}"></script>
+    <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+    <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
